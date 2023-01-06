@@ -10,7 +10,7 @@ var cols = document.getElementsByClassName("column");
 var not_resized = false;
 
 function loadModules() {
-    fetch("http://localhost:8080/module",{
+    fetch("http://localhost:8085/module",{
       method:"get",
       headers: {
         'Accept': 'application/json',

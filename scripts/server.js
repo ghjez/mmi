@@ -12,7 +12,7 @@ app.get('/module', (req, res) => {
     res.json(filmList);
 });
 
-app.listen(8080, () => {
-    console.log("Server running on port 8080");
+app.listen(8085, () => {
+    console.log("Server running on port 8085");
 });
 
