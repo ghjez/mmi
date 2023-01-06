@@ -1,0 +1,50 @@
+{ 
+  "name": "module",
+  "modulenlist": [
+      {
+        "name": "Informatik I",
+        "numcode": "000111",
+        "src": "storage/thumbnails/thumb1.png"
+      },
+      {
+        "name": "Informatik II",
+        "numcode": "000222",
+        "src": "storage/thumbnails/thumb2.png"
+      },
+      {
+        "name": "Theoretische Informatik",
+        "numcode": "150302",
+        "src": "storage/thumbnails/thumb3.png"
+      },
+      {
+        "name": "Mensch-Maschinen Interaktion",
+        "numcode": "260083",
+        "src": "storage/thumbnails/thumb4.png"
+      },
+      {
+        "name": "Projectmanagement AI",
+        "numcode": "260082",
+        "src": "storage/thumbnails/thumb5.png"
+      },
+      {
+        "name": "Web-Development",
+        "numcode": "260092",
+        "src": "storage/thumbnails/thumb6.png"
+      },
+      {
+        "name": "Software-Engineering",
+        "numcode": "360082",
+        "src": "storage/thumbnails/thumb7.png"
+      },
+      {
+        "name": "Wirtschaftlichkeitanalyse",
+        "numcode": "666666",
+        "src": "storage/thumbnails/thumb8.png"
+      },
+      {
+        "name": "Introduction to Artifitial Intelligence",
+        "numcode": "150082",
+        "src": "storage/thumbnails/thumb9.png"
+      }
+]
+}
