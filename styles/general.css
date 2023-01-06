@@ -1,0 +1,101 @@
+/* 
+font-family: 'IBM Plex Mono', monospace;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'IBM Plex Sans Condensed', sans-serif;
+font-family: 'IBM Plex Serif', serif;
+font-family: 'Inconsolata', monospace; 
+*/
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-basis: 0;
+    justify-content: center;
+    margin-top: 2vw;
+    gap: 3vw;
+}
+
+.menu-btn {
+    /* MenuButton */
+    /* width: 233px;
+    height: 63px; */
+    width: 15vw;
+    height: 3vw;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+    padding: 1vw;
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+.menu-btn:hover{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+.menu-btn *:hover{
+    cursor: pointer;
+}
+
+.menu-btn > span {
+    font-size: 2vw !important;
+}
+
+hr {
+    margin: 2vw 0vw 2vw 0vw;
+    background-color: #1F3659;
+    border: 0.05vw solid #1F3659;
+}
+
+h1 {
+    color: #1F3659;
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2vw;
+    width: 87.5vw;
+    margin: auto;
+    margin-top: 1vw;
+    /* line-height: 52px; */
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+   /*  */
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3vw !important;
+    }
+}
+
+footer {
+    display: flex;
+    margin-top: 90vh;
+    height: 10vh;
+    background-color: #1F3659;
+}

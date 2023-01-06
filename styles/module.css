@@ -1,0 +1,108 @@
+#feed {
+    width: 87vw;
+    height: 60vh;
+    margin: auto;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 0 4px; */
+    padding: 0;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 33%;
+    max-width: 30%;
+    /* padding: 0 4px; */
+    padding: 0;
+}
+
+.column .modul {
+    margin-top: 8px;
+    vertical-align: left;
+    display: flex;
+    flex-direction: column;
+    border: .2vw solid #1F3659;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 45%;
+        max-width: 45%;
+    }
+
+    .modul label {
+        font-size: 2vw !important;
+    }
+
+    #feed {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .modul label {
+        font-size: 3vw !important;
+    }
+
+    h1 {
+        font-size: 3vw !important;
+    }
+
+    #feed {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+    }
+
+}
+
+
+.modul img {
+    /* aspect ratio should be 1:2.5 */
+    object-fit: cover;
+}
+
+.modul label {
+    background: #FFFFFF;
+    border-top: .2vw solid #1F3659;
+    
+    padding: 0.3vw;
+    color: #1F3659;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    /* line-height: 31px; */
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.column .modul:hover label {
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+}

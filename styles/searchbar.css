@@ -1,0 +1,64 @@
+#search {
+    margin: auto;
+    margin-top: 1vh;
+    width: 86.8vw;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* gap: 1vw; */
+
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+}
+
+.searchbox {
+    flex-grow: 1;
+
+    height: .01vh;
+    border: 0;
+    padding: 1vw; 
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    /* line-height: 31px; */
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.searchbox:focus {
+    outline: none;
+}
+
+#search button {
+    width: 2vw;
+    height: 2vh;
+    border: 0;
+    padding: 1vw; 
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search button:hover {
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+#search button > span {
+    font-size: 1.5vw !important;
+}

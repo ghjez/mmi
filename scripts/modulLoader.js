@@ -6,8 +6,9 @@ const modul_block_3 = '</label></a>'
 var feed = document.getElementById("feed");
 var row = document.getElementById("row");
 var cols = document.getElementsByClassName("column");
+var prev_width = window.innerWidth; 
 
-var not_resized = false;
+var current_module;
 
 function loadModules() {
     fetch("http://localhost:8085/module",{
@@ -55,21 +56,33 @@ function insertBlocks(module) {
         cur_column.innerHTML += modul_block;
         capacity_counter += 1;
     }
+
+    current_module = module;
 }
 
-function reloadOnResize() {
-  let x = window.matchMedia("(max-width: 800px)");
-  // // let y = window.matchMedia("(min-width: 801px)");
-  // if(x.matches) {
-  //   for(let col in cols) {
-  //     col.innerHTML = "";
-  //   }
-  //   loadModules();
-  // }
+function reloadmk2(){
+  if((window.innerWidth<=800) && (prev_width>800)){
+    for(var i = 0; i < cols.length; i++) {
+      cols[i].innerHTML = "";
+    }
+  
+    //make 2 columns
+    insertBlocks(current_module)
+  }
+  else if((window.innerWidth>800) && (prev_width<=800)){
+    for(var i = 0; i < cols.length; i++) {
+      cols[i].innerHTML = "";
+    }
+  
+    //make 3 columns
+    insertBlocks(current_module)
+  }
+  
+  prev_width=window.innerWidth
 }
 
 loadModules();
 
-window.onresize = reloadOnResize;
+window.onresize = reloadmk2;
 
 
