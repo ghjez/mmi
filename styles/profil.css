@@ -1,0 +1,128 @@
+#feed {
+    width: 87vw;
+    height: 65vh;
+    margin: auto;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* padding: 0 4px; */
+    padding: 0;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 33%;
+    max-width: 30%;
+    /* padding: 0 4px; */
+    padding: 0;
+}
+
+.column .profil {
+    /* MenuButton */
+    /* width: 233px;
+    height: 63px; */
+    width: 15vw;
+    height: 3vw;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+    padding: 1vw;
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .column {
+        flex: 45%;
+        max-width: 45%;
+    }
+
+    .profil label {
+        font-size: 2vw !important;
+    }
+
+    #feed {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .profil label {
+        font-size: 3vw !important;
+    }
+
+    h1 {
+        font-size: 3vw !important;
+    }
+
+    #feed {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+    }
+}
+
+
+.profil img {
+    /* aspect ratio should be 1:2.5 */
+    object-fit: cover;
+}
+
+
+.profil label{
+    width: fit-content;
+    height: fit-content;
+    background: #FFFFFF;
+    border-top: .2vw solid #1F3659;
+    
+    padding: 0.3vw;
+    color: #1F3659;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    /* line-height: 31px; */
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+
+.column .profil:hover label {
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+}
