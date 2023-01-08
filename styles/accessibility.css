@@ -1,0 +1,132 @@
+#slider-div {
+    display: inline-block;
+    background: #FFF;
+    width: 35em;
+    justify-content: center;
+    margin-top: 2vw;
+    gap: 3vw;
+}
+
+span {
+    text-align: center;
+    display:inline-block;
+    margin:0;
+    padding:0;
+    color: #1F3659;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+}
+
+.slider-button {
+    width: 3vw;
+    height: 3vw;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+    padding: 1vw;
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.slider-button:hover{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+.slider-button *:hover{
+    cursor: pointer;
+}
+
+.slider-button >label {
+    display: inline-block;
+    width: 
+}
+
+.slider-button > span {
+    display: inline-block;
+    font-size: 2vw !important;
+}
+
+.slider {
+    display: inline-flex;
+}
+
+
+
+.contrast-div{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.contrast-div > span {
+    text-align:center;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    margin: 0 auto;
+}
+
+.inner-contrast-div{
+    display: inline;
+}
+
+
+.switch{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+  }
+  
+.switch-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 5em;
+    height: 2em;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  .switch-label::after {
+    content: '';
+    position: absolute;
+    top: 0.1em;
+    left: 0.1em;
+    width: 1.8em;
+    height: 1.8em;
+    background: #fff;
+    border-radius: 90%;
+    transition: 0.3s;
+  }
+  
+  input:checked + label {
+    background: #1F3659;
+  }
+  
+  input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+  
+  .switch-label:active::after {
+    width: 2.6em;
+  }

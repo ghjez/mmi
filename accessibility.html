@@ -29,8 +29,23 @@
         </header>
 
         <hr>
+        <div id="slider-div">
+            <button class="slider-button"><label for="slider-button" class="minus-title"><span>-</span></label></button>
+            <div class="slider">
+                <input type="range" min="1" max="100" class="slider" id="myRange">
+            </div>
+            <button class="slider-button"><label for="slider-button" class="plus-title"><span>+</span></label></button>
+            <span>Font size</span>
+        </div>
 
-
+        <div class="contrast-div">
+            <div class="inner-contrast-div">
+                <input type="checkbox" class="switch" id="contrast-switch"/>
+                <label for="contrast-switch" class="switch-label">Toggle</label>
+            </div>
+            <span>Höhere Kontrast</span>
+        </div>
+        
         <footer></footer>
     </body>
 </html>
