@@ -1,15 +1,14 @@
-#slider-div {
-    display: inline-block;
-    background: #FFF;
-    width: 35em;
-    justify-content: center;
-    margin-top: 2vw;
-    gap: 3vw;
+main {
+    display: flex;
+    flex-direction: column;
+    width: 87vw;
+    height: fit-content;
+    margin: auto;
+    gap: 3vh;
 }
 
-span {
+.barrier-tooltip {
     text-align: center;
-    display:inline-block;
     margin:0;
     padding:0;
     color: #1F3659;
@@ -18,8 +17,8 @@ span {
 }
 
 .slider-button {
-    width: 3vw;
-    height: 3vw;
+    width: 1.5vw;
+    height: 1.5vw;
     border-color: #1F3659;
     border-style: solid;
     border-width: .2vw;
@@ -28,12 +27,11 @@ span {
     color: #1F3659;
     background-color: white;
 
-    /* Inside auto layout */
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    /* Font properties */
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.3vw;
     font-weight: 500;
@@ -54,79 +52,84 @@ span {
     cursor: pointer;
 }
 
-.slider-button >label {
-    display: inline-block;
-    width: 
+.slider-button label {
+    text-align: center;
+    vertical-align: center;
+    padding:1vw;
+    font-size: 1.5vw;
+
+    color: #1F3659;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.slider-button > span {
-    display: inline-block;
-    font-size: 2vw !important;
+.slider-button:hover label {
+    color: white;
 }
 
 .slider {
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-
-
 .contrast-div{
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contrast-div > span {
+.contrast-div > label {
     text-align:center;
     display: flex;
     flex-direction: row;
     justify-self: center;
     margin: 0 auto;
+} 
+  
+.toggle {
+    background-color: white;
+    border-color: #1F3659;
+    border-width: .2vw;
+    border-style: solid;
+    width: 2.8em;
+    height: 1.5em;
+    /* width: 60px;
+    height: 32px; */
+    border-radius: 3em;
+    display: flex;
+    flex-direction: column;
+
+    color: #1F3659;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
 }
 
-.inner-contrast-div{
-    display: inline;
+.accessibility-container > input {
+    display: none;
 }
 
-
-.switch{
-    height: 0;
-    width: 0;
-    visibility: hidden;
-  }
-  
-.switch-label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 5em;
-    height: 2em;
-    background: grey;
-    display: block;
-    border-radius: 100px;
-    position: relative;
-  }
-  
-  .switch-label::after {
-    content: '';
-    position: absolute;
-    top: 0.1em;
-    left: 0.1em;
-    width: 1.8em;
-    height: 1.8em;
-    background: #fff;
+.toggle-slider {
+    height: 90%;
+    width: 45%;
+    background-color: #1F3659;
     border-radius: 90%;
-    transition: 0.3s;
-  }
-  
-  input:checked + label {
-    background: #1F3659;
-  }
-  
-  input:checked + label::after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-  }
-  
-  .switch-label:active::after {
-    width: 2.6em;
-  }
+    margin: 5%;
+}
+
+.accessibility-container > input:checked + .toggle {
+    background-color: #1F3659;
+}
+
+.accessibility-container > input:checked + .toggle > .toggle-slider {
+    background-color: white;
+    align-self: flex-end;
+}
+
+
+.accessibility-container {
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    align-items: center;
+    gap: 1vw;
+}

@@ -12,12 +12,13 @@
        
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/accessibility.css">
+        <link rel="stylesheet" href="styles/range-input.css">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">  
     </head>
     <body>
         <header role="toolbar">
@@ -29,23 +30,45 @@
         </header>
 
         <hr>
-        <div id="slider-div">
-            <button class="slider-button"><label for="slider-button" class="minus-title"><span>-</span></label></button>
-            <div class="slider">
-                <input type="range" min="1" max="100" class="slider" id="myRange">
+        <main>
+            <div id="slider-div" class="accessibility-container">
+                <button class="slider-button"><label for="slider-button" class="minus-title">-</label></button>
+                <div class="slider">
+                    <input role="slider" type="range" min="1" max="100" class="styled-slider slider-progress" id="font-range">
+                </div>
+                <button class="slider-button"><label for="slider-button" class="plus-title">+</label></button>
+                <label class="barrier-tooltip">Font size</label>
             </div>
-            <button class="slider-button"><label for="slider-button" class="plus-title"><span>+</span></label></button>
-            <span>Font size</span>
-        </div>
 
-        <div class="contrast-div">
-            <div class="inner-contrast-div">
-                <input type="checkbox" class="switch" id="contrast-switch"/>
-                <label for="contrast-switch" class="switch-label">Toggle</label>
+            <!-- <div class="contrast-div"> -->
+            <div id="contrast-div" class="accessibility-container">
+                <input type="checkbox" id="optionA"/>
+                <label for="optionA" class="toggle">
+                    <div class="toggle-slider"></div>
+                </label>
+                <label for="contrast-div" class="barrier-tooltip">Höhere Kontrast</label>
             </div>
-            <span>Höhere Kontrast</span>
-        </div>
+
+            <div id="simple-text-div" class="accessibility-container">
+                <input type="checkbox" id="optionA"/>
+                <label for="optionA" class="toggle">
+                    <div class="toggle-slider"></div>
+                </label>
+                <label for="simple-text-div" class="barrier-tooltip">Einfache Sprache</label>
+            </div>
+
+            <div id="tag-me-disabled-div" class="accessibility-container">
+                <input type="checkbox" id="optionA"/>
+                <label for="optionA" class="toggle">
+                    <div class="toggle-slider"></div>
+                </label>
+                <label for="tag-me-disabled-div" class="barrier-tooltip">Tag mich als Bescränkte Person</label>
+            </div>
+        </main>
         
         <footer></footer>
+
+        <script src="scripts/range-input.js"></script>
     </body>
+    
 </html>
