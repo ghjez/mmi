@@ -61,7 +61,6 @@ function insertBlocks() {
 }
 
 function reloadmk2(){
-  alert("reloadmk2");
   if((window.innerWidth<=800) && (prev_width>800)){
     for(var i = 0; i < cols.length; i++) {
       cols[i].innerHTML = "";
