@@ -1,0 +1,190 @@
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #DBEEF4;
+}
+
+#login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 30vw;
+    gap:2vh;
+}
+
+label{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+}
+
+.line{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    gap: 2%;
+}
+
+.inner-line{
+    background-color: #FFF;
+    border: solid 0.15vw #1F3659;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+    gap: 2%;
+}
+
+.line-label{
+    width: 30%;
+    text-align: right;
+    color: #1F3659;
+}
+
+.login-input{
+    border:0;
+    width: 90%;
+    height: 90%;
+    color: #1F3659;
+    background-color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.login-input:focus {
+    outline: none;
+}
+.micro-button{
+    margin-left: -2%;
+    width: 10%;
+    height: 100%;
+    color: #FFF;
+    border: 0;
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.micro-button:hover{    
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+.login-button{
+    width:40%;
+    height: 12%;
+    display:flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.login-button > .login-button-label{
+    margin-left: .5vw;
+    text-align: left;
+}
+
+.login-button:hover{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    cursor: pointer;
+}
+
+.login-button:hover >{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    cursor: pointer;
+}
+
+.login-button  *:hover{
+    cursor: pointer;
+}
+
+.blue-login-button{ 
+    background-color: #1F3659;
+}
+
+.blue-login-button > .login-button-label{
+    color:#FFF;
+}
+
+.blue-login-button:hover{
+    background-color: #FFF;
+}
+
+.blue-login-button:hover > .login-button-label{
+    color: #1F3659;
+}
+
+.white-login-button{ 
+    background-color: #FFF;
+}
+
+.white-login-button > .login-button-label{
+    color:#1F3659;
+}
+
+.white-login-button:hover{
+    background-color: #1F3659;
+}
+
+.white-login-button:hover > .login-button-label{
+    color: #FFF;
+}
+
+.login-spacer{
+    height: 12%;
+    color: #DBEEF4;
+}
+
+
+@media (max-width: 800px) {
+    #login-container {
+        width:100%;
+        height: 100%
+    }
+    label{
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #login-container {
+        width:100%;
+        height: 100%;
+    }
+    label{
+        font-size: 7vw;
+    }
+    
+    .line{
+        height: 8%;
+    }
+
+    .login-button{
+        height: 9%;
+    }
+}

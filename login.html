@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta lang="de">
+
+        <title>Login page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/login.css">
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main id="login-page">
+        <div id="login-container">
+            <div class="line">
+                <label class = "line-label">Username</label>
+                <div class="inner-line">
+                    <input class="login-input" id="login-input" alt="Username">
+                    <button class="micro-button"><span class="material-symbols-outlined">mic</span></button>
+                </div>
+            </div>
+            <div class="line">
+                <label class = "line-label">Password</label>
+                <div class="inner-line">
+                    <input class="login-input" id="password-input" type="password" alt="Password">
+                    <button class="micro-button"><span class="material-symbols-outlined">mic</span></button>
+                </div>
+            </div>
+            <button class="blue-login-button login-button" onclick="checkLogin()"><label class="login-button-label">Login</label></button>
+            <button class="white-login-button login-button"><label class="login-button-label">Registrieren</label></button>
+            <div class="login-spacer"></div>
+            <button class="white-login-button login-button"><label class="login-button-label" onclick="window.location.href='accessibility.html'">Barrierefreiheit</label></button>
+        </div>
+        <footer></footer>
+        </main> 
+    </body>
+    <script type="text/javascript" src="scripts/login.js"></script>
+
+</html>
