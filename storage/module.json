@@ -45,6 +45,26 @@
         "name": "Introduction to Artifitial Intelligence",
         "numcode": "150082",
         "src": "storage/thumbnails/thumb9.png"
+      },
+      {
+        "name": "Web-Kryptografie",
+        "numcode": "260052",
+        "src": "storage/thumbnails/thumb6.png"
+      },
+      {
+        "name": "PapaPooPoo",
+        "numcode": "360042",
+        "src": "storage/thumbnails/thumb7.png"
+      },
+      {
+        "name": "PooPooPoo",
+        "numcode": "666666",
+        "src": "storage/thumbnails/thumb8.png"
+      },
+      {
+        "name": "Introduction to Neural Intelligence",
+        "numcode": "150083",
+        "src": "storage/thumbnails/thumb9.png"
       }
 ]
 }

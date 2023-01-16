@@ -22,8 +22,10 @@ header {
     /* MenuButton */
     /* width: 233px;
     height: 63px; */
-    width: 15vw;
-    height: 3vw;
+    /* width: 15vw;
+    height: 3vw; */
+    width: 10vw;
+    height: 2vw;
     border-color: #1F3659;
     border-style: solid;
     border-width: .2vw;
@@ -39,7 +41,8 @@ header {
 
     /* Font properties */
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.3vw;
+    /* font-size: 1.3vw; */
+    font-size: 1vw;
     font-weight: 500;
     line-height: 31px;
     letter-spacing: 0em;
@@ -60,7 +63,7 @@ header {
 }
 
 .menu-btn > span {
-    font-size: 2vw !important;
+    font-size: 1.5vw !important;
 }
 
 hr {
@@ -70,12 +73,14 @@ hr {
 }
 
 h1 {
+    box-sizing: border-box;
     color: #1F3659;
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 500;
     font-size: 2vw;
-    width: 87.5vw;
+    /* width: 87.5vw; */
+    width: 62vw;
     margin: auto;
     margin-top: 1vw;
     /* line-height: 52px; */
@@ -83,13 +88,38 @@ h1 {
 
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media (max-width: 800px) {
-   /*  */
+    .menu-btn {
+        width: 15vw;
+        height: 3vw;
+    }
+    h1 {
+        width: 86.8vw;
+        font-size: 4vw !important;
+    }
+
+    header {
+        flex-direction: column;
+        overflow: hidden;
+        width: 86.8vw;
+        margin: auto;
+        justify-content: right;
+        align-items: right;
+    }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
     h1 {
-        font-size: 3vw !important;
+        font-size: 4vw !important;
+    }
+
+    header {
+        flex-direction: column;
+        overflow: hidden;
+        width: 86.8vw;
+        margin: auto;
+        justify-content: right;
+        align-items: right;
     }
 }
 
@@ -105,4 +135,56 @@ footer {
 #footer_margin{
     margin: 0.5vw 0vw 0.5vw 0vw;
     /* border: 0.01vw solid #1F3659; */
+}
+
+
+  
+/* Hide the links inside the navigation menu (except for logo/home) */
+header #mobile-menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 2vw;
+    width: 100%;
+}
+
+  /* Style navigation menu links */
+header a {
+    color: #1F3659;
+    /* border: #1F3659 solid .5vw .2vw; */
+    /* width: 100%; */
+    padding: 1vw 1vw;
+    text-decoration: none;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style the hamburger menu */
+header a.icon {
+    width: 4vw;
+    height: 4vw;
+    margin-top: 4vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    color: #1F3659;
+    border: none;
+    /* margin-left: 90%; */
+}
+
+header a.icon i {
+    font-size: 4vw !important;
+}
+
+/* Add a background color on mouse-over */
+header a:hover {
+    background-color: #1F3659;
+    color: white;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+    background-color: #1F3659;
+    color: white;
 }

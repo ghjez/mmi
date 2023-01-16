@@ -1,18 +1,20 @@
 #feed {
-    width: 87vw;
+    /* width: 87vw; */
+    box-sizing: border-box;
+    width: 64vw;
     height: 65vh;
     margin: auto;
     scroll-behavior: smooth;
     overflow-y: scroll;
-    
 }
 
 .row {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /* padding: 0 4px; */
-    padding: 0;
+    padding: 1vw;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -41,13 +43,17 @@
     }
 
     .modul label {
-        font-size: 2vw !important;
+        font-size: 2.5vw !important;
     }
 
     #feed {
         width: 86.8vw;
         height: fit-content;
         overflow: hidden;
+    }
+
+    .row {
+        padding: 0;
     }
 }
 
@@ -62,14 +68,14 @@
         font-size: 3vw !important;
     }
 
-    h1 {
-        font-size: 3vw !important;
-    }
-
     #feed {
         width: 86.8vw;
         height: fit-content;
         overflow: hidden;
+    }
+
+    .row {
+        padding: 0;
     }
 
 }

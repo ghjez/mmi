@@ -19,25 +19,25 @@ function loadModules() {
     }).then(function(response){
       response.json().then(function(data){
         let module = JSON.parse(data);
-        insertBlocks(module);
+        insertBlocksLeftToRight(module);
       });
 }); }
 
 
 function createBlock(module, pos) {
     let modul_block = modul_block_1 + module.modulenlist[pos].src + modul_block_2 + module.modulenlist[pos].name + "<br>" + module.modulenlist[pos].numcode + modul_block_3;
-    console.log(modul_block);
+    // console.log(modul_block);
     return modul_block;
 }
 
-function insertBlocks(module) {
+function insertBlocksVertically(module) {
     let x = window.matchMedia("(max-width: 800px)");
     let max_col_capacity = 0;
 
     if (x.matches) { // If media query matches
       max_col_capacity = module.modulenlist.length / 2;
     } else {
-      max_col_capacity = module.modulenlist.length / 3;
+      max_col_capacity = Math.ceil(module.modulenlist.length / 3);
     } 
 
     console.log(max_col_capacity);
@@ -60,6 +60,34 @@ function insertBlocks(module) {
     current_module = module;
 }
 
+function insertBlocksLeftToRight(module) {
+  let x = window.matchMedia("(max-width: 800px)");
+  let max_col_capacity = 0;
+
+  if (x.matches) { // If media query matches
+    max_col_capacity = 2;
+  } else {
+    max_col_capacity = 3;
+  } 
+
+  // console.log(max_col_capacity);
+  let index = 0;
+  let cur_column = cols[index];
+  for(let i = 0; i < module.modulenlist.length; i++) {
+      let modul_block = createBlock(module, i);
+
+      if(index >= max_col_capacity) { 
+          index = 0;
+      }
+
+      cur_column = cols[index];
+      cur_column.innerHTML += modul_block;
+      index += 1;
+  }
+
+  current_module = module;
+}
+
 function reloadmk2(){
   if((window.innerWidth<=800) && (prev_width>800)){
     for(var i = 0; i < cols.length; i++) {
@@ -67,7 +95,7 @@ function reloadmk2(){
     }
   
     //make 2 columns
-    insertBlocks(current_module)
+    insertBlocksLeftToRight(current_module)
   }
   else if((window.innerWidth>800) && (prev_width<=800)){
     for(var i = 0; i < cols.length; i++) {
@@ -75,14 +103,19 @@ function reloadmk2(){
     }
   
     //make 3 columns
-    insertBlocks(current_module)
+    insertBlocksLeftToRight(current_module)
   }
   
   prev_width=window.innerWidth
 }
 
+function resized() {
+  reloadmk2();
+  reloadMenu();
+}
+
 loadModules();
 
-window.onresize = reloadmk2;
+window.onresize = resized;
 
 
