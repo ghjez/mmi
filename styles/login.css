@@ -1,3 +1,7 @@
+body {
+    background-color: #f1f1f1;
+}
+
 #login-page {
     display: flex;
     flex-direction: column;
@@ -5,7 +9,7 @@
     align-items: center;
     height: 95vh;
     width: 100vw;
-    background-color: #f1f1f1;
+    
 }
 
 #login-container {
@@ -19,11 +23,13 @@
 }
 
 label{
+    box-sizing: border-box;
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.3vw;
     font-weight: 500;
     line-height: 31px;
     letter-spacing: 0em;
+    padding-right: 2%;
 }
 
 .line{
@@ -33,7 +39,7 @@ label{
     align-items: center;
     height: 10%;
     width: 100%;
-    gap: 2%;
+    /* gap: 2%; */
 }
 
 .inner-line{
@@ -100,6 +106,9 @@ label{
     display:flex;
     align-items: center;
     justify-content: left;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
 }
 
 .login-button > .login-button-label{

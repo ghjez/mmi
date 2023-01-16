@@ -18,7 +18,7 @@ mobileMenu = `
 <a href="#pruefungen">Prüfungen<span class="material-symbols-outlined">fact_check</span></a>
 <a href="profil.html">Profil<span class="material-symbols-outlined">person</span></a>
 <a href="accessibility.html">Barrierfrei<span class="material-icons">accessibility_new</span></a>
-<a href="#logout">Logout<span class="material-icons">exit_to_app</span></a>
+<a onclick="logout();">Logout<span class="material-icons">exit_to_app</span></a>
 </div>
 `
 
