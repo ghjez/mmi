@@ -1,6 +1,6 @@
-const modul_block_1 = '<button href="" class="profil"><img src="';
+const modul_block_1 = '<button href="" class="profil-btn"><img src="';
 const modul_block_2 = '" alt="Bild von der Modul Thumbnail"><label for="profil" class="profil-title">'
-const modul_block_12= '<button href="" class="profil"><label for="profil" class="profil-title">'
+const modul_block_12= '<button href="" class="profil-btn"><label for="profil" class="profil-title">'
 const modul_block_3 = '</label></button>'
 
 var feed = document.getElementById("feed");

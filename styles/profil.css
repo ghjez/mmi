@@ -1,5 +1,6 @@
 #feed {
-    width: 87vw;
+    box-sizing: border-box;
+    width: 62vw;
     height:80vh;
     margin: auto;
 }
@@ -21,13 +22,13 @@
     max-width: 30%;
     /* padding: 0 4px; */
     padding: 0;
-    gap: 1vw;
-    height: 100%;
+    gap: 2vw;
+    height: fit-content;
     align-items: center;
     justify-content: space-around;
 }
 
-.column .profil {
+.column .profil-btn {
     /* MenuButton */
     /* width: 233px;
     height: 63px; */
@@ -62,7 +63,7 @@
         max-width: 45%;
     }
 
-    .profil label {
+    .profil-btn label {
         font-size: 2vw !important;
     }
 
@@ -80,7 +81,7 @@
         max-width: 100%;
     }
 
-    .profil label {
+    .profil-btn label {
         font-size: 3vw !important;
     }
 
@@ -95,13 +96,13 @@
     }
 }
 
-.profil img {
+.profil-btn img {
     /* aspect ratio should be 1:2.5 */
     object-fit: cover;
 }
 
 
-.profil label{
+.profil-btn label{
     width: fit-content;
     height: fit-content;
     background: transparent;
@@ -118,9 +119,18 @@
 }
 
 
-.column .profil:hover label {
+.column .profil-btn:hover label {
     animation-timing-function: ease-in-out;
     animation-duration: 300ms;
     color: white;
     background-color: #1F3659;
+}
+
+.profil-btn:hover {
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+
+    cursor: pointer;
 }

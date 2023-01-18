@@ -109,13 +109,6 @@ function reloadmk2(){
   prev_width=window.innerWidth
 }
 
-function resized() {
-  reloadmk2();
-  reloadMenu();
-}
-
 loadModules();
-
-window.onresize = resized;
 
 

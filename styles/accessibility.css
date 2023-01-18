@@ -1,7 +1,8 @@
 main {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    width: 87vw;
+    width: 62vw;
     height: fit-content;
     margin: auto;
     gap: 3vh;
@@ -13,7 +14,7 @@ main {
     padding:0;
     color: #1F3659;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 
 .slider-button {
@@ -101,7 +102,7 @@ main {
 
     color: #1F3659;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 1.3vw;
+    font-size: 1vw;
 }
 
 .accessibility-container > input {
@@ -116,11 +117,27 @@ main {
     margin: 5%;
 }
 
-.accessibility-container > input:checked + .toggle {
+#contrast:checked + #contrast-toggle {
     background-color: #1F3659;
 }
 
-.accessibility-container > input:checked + .toggle > .toggle-slider {
+#simple-text:checked + #simple-text-toggle {
+    background-color: #1F3659;
+}
+
+#tag-me-disabled:checked + #tag-me-disabled-toggle {
+    background-color: #1F3659;
+}
+
+.accessibility-container > input:checked + #contrast-toggle > .toggle-slider {
+    background-color: white;
+    align-self: flex-end;
+}
+.accessibility-container > input:checked + #simple-text-toggle > .toggle-slider {
+    background-color: white;
+    align-self: flex-end;
+}
+.accessibility-container > input:checked + #tag-me-disabled-toggle > .toggle-slider {
     background-color: white;
     align-self: flex-end;
 }

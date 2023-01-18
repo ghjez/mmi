@@ -57,4 +57,11 @@ function reloadMenu(){
     window_prev_width = window.innerWidth;
 }
 
+function resized() {
+    reloadMenu();
+    reloadmk2();
+}
+
 loadMenu();
+
+window.onresize = resized;

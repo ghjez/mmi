@@ -19,47 +19,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">  
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header role="toolbar">
-            <button onclick= "window.location.href='index.html'" role="" id="module-btn" class="menu-btn"><label for="module" class="menu-btn-label">Module</label><span class="material-icons">menu_book</span></button>
+            <!-- <button onclick= "window.location.href='index.html'" role="" id="module-btn" class="menu-btn"><label for="module" class="menu-btn-label">Module</label><span class="material-icons">menu_book</span></button>
             <button role="" id="pruefungen-btn" class="menu-btn"><label for="pruefungen" class="menu-btn-label">Prüfungen</label><span class="material-symbols-outlined">fact_check</span></button>
             <button onclick= "window.location.href='profil.html'" role="" id="profil-btn" class="menu-btn"><label for="profil" class="menu-btn-label">Profil</label><span class="material-symbols-outlined">person</span></button>
             <button onclick= "window.location.href='accessibility.html'" role="" id="barrierfrei-btn" class="menu-btn"><label for="barrierfrei" class="menu-btn-label">Barrierfrei</label><span class="material-icons">accessibility_new</span></button>
             <button onclick="logout();" role="" id="logout-btn" class="menu-btn"><label for="logout" class="menu-btn-label">Log Out</label><span class="material-icons">exit_to_app</span></button>
+              -->
         </header>
 
         <hr>
         <main>
             <div id="slider-div" class="accessibility-container">
-                <button class="slider-button"><label for="slider-button" class="minus-title">-</label></button>
+                <button class="slider-button" id="minus_btn"><label for="slider-button" class="minus-title">-</label></button>
                 <div class="slider">
                     <input role="slider" type="range" min="1" max="100" class="styled-slider slider-progress" id="font-range">
                 </div>
-                <button class="slider-button"><label for="slider-button" class="plus-title">+</label></button>
+                <button class="slider-button" id="plus_btn"><label for="slider-button" class="plus-title">+</label></button>
                 <label class="barrier-tooltip">Font size</label>
             </div>
 
             <!-- <div class="contrast-div"> -->
             <div id="contrast-div" class="accessibility-container">
-                <input type="checkbox" id="optionA"/>
-                <label for="optionA" class="toggle">
+                <input type="checkbox" id="contrast"/>
+                <label for="contrast" class="toggle" id="contrast-toggle">
                     <div class="toggle-slider"></div>
                 </label>
                 <label for="contrast-div" class="barrier-tooltip">Höhere Kontrast</label>
             </div>
 
             <div id="simple-text-div" class="accessibility-container">
-                <input type="checkbox" id="optionA"/>
-                <label for="optionA" class="toggle">
+                <input type="checkbox" id="simple-text"/>
+                <label for="simple-text" class="toggle" id="simple-text-toggle">
                     <div class="toggle-slider"></div>
                 </label>
                 <label for="simple-text-div" class="barrier-tooltip">Einfache Sprache</label>
             </div>
 
             <div id="tag-me-disabled-div" class="accessibility-container">
-                <input type="checkbox" id="optionA"/>
-                <label for="optionA" class="toggle">
+                <input type="checkbox" id="tag-me-disabled"/>
+                <label for="tag-me-disabled" class="toggle" id="tag-me-disabled-toggle">
                     <div class="toggle-slider"></div>
                 </label>
                 <label for="tag-me-disabled-div" class="barrier-tooltip">Tag mich als Bescränkte Person</label>
@@ -70,6 +73,9 @@
         
         <script src="scripts/range-input.js"></script>
         <script src="scripts/logout.js"></script>
+        <script type="text/javascript" src="scripts/menuLoader.js"></script>
+        <script src="scripts/fontSlider.js"></script>
+        <script type="text/javascript" src="scripts/check-login.js"></script>
     </body>
     
 </html>
