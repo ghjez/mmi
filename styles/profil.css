@@ -1,8 +1,9 @@
 #feed {
     box-sizing: border-box;
     width: 62vw;
-    height:80vh;
+    /* height:80vh; */
     margin: auto;
+    margin-top: 2vw;
 }
 
 .row {
@@ -45,15 +46,150 @@
     /* Inside auto layout */
     display: flex;
     align-items: center;
-    justify-content: stretch;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.profil-btn span {
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+#change_img {
+    display: none;
+}
+
+#user-profile {
+    width: 62vw;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+
+#profile-settings {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+#name-line {
+    width: fit-content;
+    display: flex;
+    gap: 1vw;
+}
+
+#profile-settings input {
+    box-sizing: border-box;
+    height: 3vw;
+    width: 20vw;
+
+    color: #1F3659;
+    background-color: white;
+
+    border: #1F3659 solid .1vw;
+    padding: 0.3vw;
 
     /* Font properties */
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.3vw;
     font-weight: 500;
+    /* line-height: 31px; */
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#name-line input {
+    width: 9.5vw;
+    /* width: fit-content; */
+}
+
+#profile-settings input:focus {
+    outline: none;
+}
+
+#userpic {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#userpic label {
+    color: #1F3659;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: left;
+}
+
+#change-img-label {
+    z-index: -1;
+}
+
+#change-img-label:hover {
+    z-index: 10000;
+}
+
+#bearbeiten-btn {
+    box-sizing: border-box;
+    width: 10vw;
+    height: 2vw;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+    padding: 1vw;
+
+    color: #1F3659;
+    background-color: white;
+    margin-top: 2.6vw;
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    /* font-size: 1.3vw; */
+    font-size: 1vw;
+    font-weight: 500;
     line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+#bearbeiten-btn:hover{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+#bearbeiten-btn *:hover{
+    cursor: pointer;
+}
+
+#bearbeiten-btn > span {
+    font-size: 1.5vw !important;
+}
+ 
+#userpic img {
+    box-sizing: border-box;
+    width: 9vw;
+    height: 12vw;
+    object-fit:scale-down;
+
+    border: #1F3659 solid .2vw;    
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -64,13 +200,57 @@
     }
 
     .profil-btn label {
-        font-size: 2vw !important;
+        font-size: 2.3vw !important;
     }
 
     #feed {
         width: 86.8vw;
         height: fit-content;
         overflow: hidden;
+        margin-top: 8vw;
+    }
+
+    #user-profile {
+        width: 86.8vw;
+    }
+
+    .profil-btn span {
+        font-size: 5vw;
+        font-weight: 500;
+        margin-right: 2vw;
+    }
+
+    #userpic img {
+        width: 18vw;
+        height: 24vw;
+  
+    }
+
+    #profile-settings {
+        width: 40vw;
+        gap: 2vw;
+    }
+
+    #profile-settings input {
+        width: 20vw; 
+        font-size: 3vw;
+        height: 4vw;
+    }
+
+    #bearbeiten-btn {
+        box-sizing: border-box;
+        width: 20vw;
+        height: 6vw;
+        font-size: 2.3vw;
+        margin-top: 5.5vw;
+    }
+
+    #bearbeiten-btn > span {
+        font-size: 4vw !important;
+    }
+
+    #userpic label {
+       font-size: 2vw;
     }
 }
 
@@ -81,8 +261,13 @@
         max-width: 100%;
     }
 
+    .row {
+        gap: 2vw;
+    }
+
     .profil-btn label {
         font-size: 3vw !important;
+        margin-left: 2vw;
     }
 
     h1 {
@@ -94,6 +279,13 @@
         height: fit-content;
         overflow: hidden;
     }
+
+    .profil-btn span {
+        font-size: 6vw;
+        font-weight: 500;
+        margin-right: 3vw;
+    }
+    
 }
 
 .profil-btn img {

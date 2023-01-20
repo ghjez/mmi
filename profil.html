@@ -23,14 +23,30 @@
     </head>
     <body>
         <header role="toolbar">
-            <button onclick= "window.location.href='index.html'" role="" id="module-btn" class="menu-btn"><label for="module" class="menu-btn-label">Module</label><span class="material-icons">menu_book</span></button>
+            <!-- <button onclick= "window.location.href='index.html'" role="" id="module-btn" class="menu-btn"><label for="module" class="menu-btn-label">Module</label><span class="material-icons">menu_book</span></button>
             <button role="" id="pruefungen-btn" class="menu-btn"><label for="pruefungen" class="menu-btn-label">Prüfungen</label><span class="material-symbols-outlined">fact_check</span></button>
             <button onclick= "window.location.href='profil.html'" role="" id="profil-btn" class="menu-btn"><label for="profil" class="menu-btn-label">Profil</label><span class="material-symbols-outlined">person</span></button>
             <button onclick= "window.location.href='accessibility.html'" role="" id="barrierfrei-btn" class="menu-btn"><label for="barrierfrei" class="menu-btn-label">Barrierfrei</label><span class="material-icons">accessibility_new</span></button>
-            <button onclick="logout();" role="" id="logout-btn" class="menu-btn"><label for="logout" class="menu-btn-label">Log Out</label><span class="material-icons">exit_to_app</span></button>
+            <button onclick="logout();" role="" id="logout-btn" class="menu-btn"><label for="logout" class="menu-btn-label">Log Out</label><span class="material-icons">exit_to_app</span></button> -->
         </header>
 
         <hr>
+        <group id="user-profile">
+            <div id="profile-settings">
+                <div id="name-line">
+                    <input type="text" name="Vorname" id="vorname">
+                    <input type="text" name="Nachname" id="nachname">
+                </div>
+                <input type="text" name="Nickname" id="nickname">
+                <button id="bearbeiten-btn"><label id="bearbeiten-btn-label" for="bearbeiten-btn">Bearbeiten</label><span id="bearbeiten-btn-icon" class="material-symbols-outlined">edit</span></button>
+            </div>
+            <div id="userpic">
+                <label id="change-img-label" for="change_img">Bild wechseln</label>
+                <input id="change_img" type="file" onchange="loadNewImg(event)"/>
+                <img id="userpic_img" src="storage/userpic.png" alt="Picture of the user.">
+                <label for="userpic" id="userpic_label">Ihre Profilbild</label>
+            </div>
+        </group>
         <main id="feed" role="feed">
             <div class="row">
                 <div class="column">

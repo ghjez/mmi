@@ -1,31 +1,79 @@
-const modul_block_1 = '<button href="" class="profil-btn"><img src="';
-const modul_block_2 = '" alt="Bild von der Modul Thumbnail"><label for="profil" class="profil-title">'
-const modul_block_12= '<button href="" class="profil-btn"><label for="profil" class="profil-title">'
-const modul_block_3 = '</label></button>'
+const modul_block_1= '<button href="" class="profil-btn"><label for="profil" class="profil-title">';
+const modul_block_2 = '</label>'
+const modul_block_3 = '</button>';
+
+// The order of icons has to correspond to the order of buttons
+const icons = [
+  {name: "planner", value: `<span class="material-symbols-outlined">date_range</span>`},
+  {name: "stud-bescheinigung", value: `<span class="material-symbols-outlined">assignment</span>`},
+  {name: "verlaufsplan", value: `<span class="material-symbols-outlined">table</span>`},
+  {name: "leistung", value: `<span class="material-symbols-outlined">school</span>`},
+  {name: "bib-ausweis", value: `<span class="material-icons">menu_book</span>`},
+  {name: "loginID", value: `<span class="material-symbols-outlined">lock</span>`},
+  {name: "ticket", value: `<span class="material-symbols-outlined">directions_bus</span>`},
+  {name: "konto-beitrag", value: `<span class="material-symbols-outlined">euro_symbol</span>`},
+  {name: "rub-mail", value: `<span class="material-symbols-outlined">mail</span>`},
+]
+
+const profileButtons=[
+  {name: "Mein Planner", src:"", link:""},
+  {name: "Studienbescheinigung", src:"", link:""},
+  {name: "Studienverlaufsplan", src:"", link:""},
+  {name: "Leistungsnachweise", src:"", link:""},
+  {name: "Bibliothekausweis", src:"", link:""},
+  {name: "LoginID", src:"", link:""},
+  {name: "ÖPNV Ticket", src:"", link:""},
+  {name: "Konto und Sozialbetrag", src:"", link:""},
+  {name: "RUB-Mail", src:"", link:""}
+
+]
 
 var feed = document.getElementById("feed");
 var row = document.getElementById("row");
 var cols = document.getElementsByClassName("column");
 var prev_width = window.innerWidth; 
 
-const profileButtons=[
-  {name: "Mein Stundenplan", src:"", link:""},
-  {name: "Studienbescheinigung", src:"", link:""},
-  {name: "Studienverlaufsplan", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""},
-  {name: "Leistungsnachweise", src:"", link:""}
+var vorname = document.getElementById("vorname");
+var f_name = document.getElementById("nachname");
+var nickname = document.getElementById("nickname");
+var profile_fields = [vorname, f_name, nickname];
 
-]
+var bearbeiten_btn = document.getElementById("bearbeiten-btn");
+var bearbeiten_btn_label = document.getElementById("bearbeiten-btn-label");
+var bearbeiten_btn_icon = document.getElementById("bearbeiten-btn-icon");
+var profil_img = document.getElementById("userpic_img");
+var change_img = document.getElementById("change_img");
+var editing = false;
+
+function loadProfile() {
+  fetch("http://localhost:8085/profile",{
+    method:"get",
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json' }
+  }).then(function(response){
+    response.json().then(function(data){
+      let profile = JSON.parse(data);
+      initProfile(profile);
+    });
+}); }
+
+function setProfile() {
+  fetch("http://localhost:8085/profile",{
+    method:"put",
+    body: JSON.stringify({
+      vorname: vorname.value,
+      name: f_name.value,
+      nickname: nickname.value
+    }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json' },
+    });
+}
 
 function createBlock(pos) {
-  console.log(pos)
-  //let modul_block = modul_block_1 + profileButtons[pos].src + modul_block_2 + profileButtons[pos].name + modul_block_3;
-  let modul_block = modul_block_12 + profileButtons[pos].name + modul_block_3;
-  console.log(modul_block);
+  let modul_block = modul_block_1 + profileButtons[pos].name + modul_block_2 + icons[pos].value + modul_block_3;
   return modul_block;
 }
 
@@ -83,4 +131,56 @@ function reloadmk2(){
 
 console.log(profileButtons)
 insertBlocks();
-window.onresize = reloadmk2;
+loadProfile();
+// window.onresize = reloadmk2;
+
+function loadNewImg(event) {
+  profil_img.src = URL.createObjectURL(event.target.files[0]);
+}
+
+function initProfile(profile) {
+  editing = false;
+  bearbeiten_btn_label.textContent = "Bearbeiten";
+  bearbeiten_btn_icon.textContent = "edit";
+  for(let i = 0; i < profile_fields.length; i++) {
+    vorname.value = profile.vorname;
+    f_name.value = profile.name;
+    nickname.value = profile.nickname;
+
+    profile_fields[i].style.border = "none";
+    profile_fields[i].readOnly = true;
+  }
+  profil_img.style.cursor = "default";
+  // change_img.hidden = true;
+}
+
+
+bearbeiten_btn.addEventListener("click", () => {
+  if(editing) {
+    setProfile();
+    editing = false;
+    bearbeiten_btn_label.textContent = "Bearbeiten";
+    bearbeiten_btn_icon.textContent = "edit";
+    for(let i = 0; i < profile_fields.length; i++) {
+      profile_fields[i].style.border = "none";
+      profile_fields[i].readOnly = true;
+    }
+    profil_img.style.cursor = "default";
+    // change_img.hidden = true;
+  }
+  else {
+    editing = true;
+    bearbeiten_btn_label.textContent = "Speichern";
+    bearbeiten_btn_icon.textContent = "done";
+    for(let i = 0; i < profile_fields.length; i++) {
+      profile_fields[i].style.border = "#1F3659 solid .1vw";
+      profile_fields[i].readOnly = false;
+    }
+
+    profil_img.style.cursor = "pointer";
+    // change_img.hidden = false;
+    
+  }
+})
+
+
