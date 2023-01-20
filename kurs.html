@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible">
+        <meta lang="de">
+
+        <title>Login page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/kurs.css">
+
+
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header role="toolbar">
+            <!-- <button onclick= "window.location.href='index.html'" role="" id="module-btn" class="menu-btn"><label for="module" class="menu-btn-label">Module</label><span class="material-icons">menu_book</span></button>
+            <button role="" id="pruefungen-btn" class="menu-btn"><label for="pruefungen" class="menu-btn-label">Prüfungen</label><span class="material-symbols-outlined">fact_check</span></button>
+            <button onclick= "window.location.href='profil.html'" role="" id="profil-btn" class="menu-btn"><label for="profil" class="menu-btn-label">Profil</label><span class="material-symbols-outlined">person</span></button>
+            <button onclick= "window.location.href='accessibility.html'" role="" id="barrierfrei-btn" class="menu-btn"><label for="barrierfrei" class="menu-btn-label">Barrierfrei</label><span class="material-icons">accessibility_new</span></button>
+            <button onclick="logout();" role="" id="logout-btn" class="menu-btn"><label for="logout" class="menu-btn-label">Log Out</label><span class="material-icons">exit_to_app</span></button> -->
+        </header>
+        <hr>
+        <header class="kurs-header">
+            <button class="kurs-header-button kurs-button-label">Kurs 1</button>
+            <button class="kurs-header-button kurs-pruefungen" onclick=" window.location.href='./pruefungen.html'"><label>Prüfungen</label></button>
+        </header>
+        <main id="kurs-page">
+            <h1>Forum</h1>
+            <!-- ??? school menu_book -->
+            <ul class="kurs-forum-list">
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Ankündigungen</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Allgemeine Diskussionen</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Forum für Menschen mir speziellen Bedürfnissen</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Spezielles Forum 1</label></a></li>
+            </ul>
+            <h1>Organisation</h1>
+            <!-- ??? school menu_book -->
+            <ul class="kurs-forum-list">
+                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Organisation des Kurses</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Zoom-Link</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Klausur-Termine</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Übungsgruppen</label></a></li>
+            </ul>
+
+            <h1>Kurs</h1>
+            <!-- ??? school menu_book -->
+            <ul class="kurs-forum-list">
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Video)</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Script)</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Übung 1</label></a></li>
+                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Zusatzmaterial 1</label></a></li>
+            </ul>
+        </main>
+    </body>
+    <script type="text/javascript" src="scripts/logout.js"></script>
+    <script type="text/javascript" src="scripts/menuLoader.js"></script>
+    <script type="text/javascript" src="scripts/modulLoader.js"></script>
+</html>

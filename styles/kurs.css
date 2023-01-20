@@ -1,0 +1,101 @@
+#kurs-page{
+    box-sizing: border-box;
+    display:flex;
+    margin: auto;
+    width:62vw;
+    height: 80vh;
+    flex-direction: column;
+    align-items: left;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 2vw;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F3659;
+}
+
+.kurs-forum-list{
+    list-style:none;
+    margin-bottom: 10vh;
+}
+
+.kurs-forum-list > li> a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2vw;
+    font-weight: 500;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F3659;
+}
+
+.kurs-forum-list > li> a > span{
+    font-size: 1.8vw;
+}
+
+.kurs-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin:auto;
+    margin-bottom: -5vh;
+    height: 5vh;
+    width: 60vw;
+    gap: 0px;
+}
+
+.kurs-header-button{
+    width: 12vw;
+    height: 3vw;
+    border-color: #1F3659;
+    border-style: solid;
+    border-width: .2vw;
+    padding: 1vw;
+
+    color: #1F3659;
+    background-color: white;
+
+    /* Inside auto layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Font properties */
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: -5vh;
+}
+
+.kurs-button-label{
+    border-color: #1F3659;
+    color:white;
+    background-color: #1F3659;
+}
+
+.kurs-pruefungen:hover{
+    animation-timing-function: ease-in-out;
+    animation-duration: 300ms;
+    color: white;
+    background-color: #1F3659;
+    cursor: pointer;
+}
+
+.kurs-label{
+    font-size: 1.5vw !important;
+}

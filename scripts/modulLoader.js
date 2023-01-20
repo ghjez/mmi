@@ -1,4 +1,4 @@
-const modul_block_1 = '<a href="" class="modul"><img src="';
+const modul_block_1 = '<a href="./kurs.html" class="modul"><img src="';
     
 const modul_block_2 = '" alt="Bild von der Modul Thumbnail"><label for="modul" class="modul-title">'
 const modul_block_3 = '</label></a>'
