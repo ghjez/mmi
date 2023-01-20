@@ -1,0 +1,132 @@
+#columns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 62vw;
+    height: 80vh;
+    margin: auto;
+    padding: 0;
+    background-color: transparent;
+}
+
+.pruefungen-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 45%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: #1F3659; */
+    background-color: transparent;
+    gap: 1vw;
+}
+
+.pruefungen-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    gap: 1vw;
+
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 2.3vw;
+    margin-bottom: 2vh;
+}
+
+.pruefung{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    border: solid 0.3vw #1F3659;
+    background-color: white;
+    color: #1F3659;
+
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.7vw;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-left: 1vw;
+}
+
+.pruefung:hover{
+    background-color: #1F3659;
+    color: white;
+}
+
+@media (max-height: 600px) {
+    .pruefung{
+        font-size: 2vw;
+        height: 12vh;
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 800px) {
+    #columns{
+        width: 86.6vw;
+    }
+
+    h1{
+        font-size: 3.5vw !important;
+    }
+
+    .pruefung{
+        font-size: 3vw;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    #columns{
+        box-sizing: border-box;
+        flex-direction:column;
+        justify-content: flex-start;
+        gap: 5vh;
+        height:80vh;
+        flex-wrap: nowrap;
+    }
+
+    #columns{
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .pruefungen-column{
+        width: 100%;
+        height:fit-content;
+        box-sizing: unset;
+        scroll-behavior: unset;
+        overflow-y: unset;
+        overflow-x: unset;
+    }
+
+    .pruefungen-nav{
+        height:fit-content;
+        scroll-behavior: unset;
+        overflow-y: unset;
+        overflow-x: unset;
+    }
+}
