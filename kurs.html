@@ -19,6 +19,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
+         <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header role="toolbar">
@@ -30,17 +32,17 @@
         </header>
         <hr>
         <header class="kurs-header">
-            <button class="kurs-header-button kurs-button-label">Kurs 1</button>
-            <button class="kurs-header-button kurs-pruefungen" onclick=" window.location.href='./pruefung.html'"><label>Prüfung</label></button>
+            <button class="kurs-header-button" id="kurs-button-label">Kurs 1</button>
+            <button class="kurs-header-button" id="kurs-pruefungen" onclick=" window.location.href='./pruefungen.html'"><label>Prüfung</label></button>
         </header>
         <main id="kurs-page">
             <h1>Forum</h1>
             <!-- ??? school menu_book -->
             <ul class="kurs-forum-list">
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Ankündigungen</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Allgemeine Diskussionen</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Forum für Menschen mir speziellen Bedürfnissen</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Spezielles Forum 1</label></a></li>
+                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Ankündigungen</label></a></li>
+                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Allgemeine Diskussionen</label></a></li>
+                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Forum für Menschen mir speziellen Bedürfnissen</label></a></li>
+                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Spezielles Forum 1</label></a></li>
             </ul>
             <h1>Organisation</h1>
             <!-- ??? school menu_book -->

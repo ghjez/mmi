@@ -133,11 +133,19 @@
 }
 
 #change-img-label {
-    z-index: -1;
+    display: none;
+    position: absolute;
+    align-self: center;
+    z-index: 3;
+    background-color: white;
+    border: #1F3659 solid .2vw;
+    padding: .5vw;
 }
 
 #change-img-label:hover {
-    z-index: 10000;
+    background-color: #1F3659;
+    color: white;
+    cursor: pointer;
 }
 
 #bearbeiten-btn {
@@ -212,6 +220,7 @@
 
     #user-profile {
         width: 86.8vw;
+        gap: 5vw;
     }
 
     .profil-btn span {

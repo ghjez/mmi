@@ -43,6 +43,7 @@ var bearbeiten_btn_label = document.getElementById("bearbeiten-btn-label");
 var bearbeiten_btn_icon = document.getElementById("bearbeiten-btn-icon");
 var profil_img = document.getElementById("userpic_img");
 var change_img = document.getElementById("change_img");
+var change_img_label = document.getElementById("change-img-label");
 var editing = false;
 
 function loadProfile() {
@@ -64,7 +65,7 @@ function setProfile() {
     body: JSON.stringify({
       vorname: vorname.value,
       name: f_name.value,
-      nickname: nickname.value
+      nickname: nickname.value,
     }),
     headers: {
       'Accept': 'application/json',
@@ -129,11 +130,6 @@ function reloadmk2(){
   prev_width=window.innerWidth
 }
 
-console.log(profileButtons)
-insertBlocks();
-loadProfile();
-// window.onresize = reloadmk2;
-
 function loadNewImg(event) {
   profil_img.src = URL.createObjectURL(event.target.files[0]);
 }
@@ -142,6 +138,7 @@ function initProfile(profile) {
   editing = false;
   bearbeiten_btn_label.textContent = "Bearbeiten";
   bearbeiten_btn_icon.textContent = "edit";
+  change_img_label.style.display = "none";
   for(let i = 0; i < profile_fields.length; i++) {
     vorname.value = profile.vorname;
     f_name.value = profile.name;
@@ -150,6 +147,7 @@ function initProfile(profile) {
     profile_fields[i].style.border = "none";
     profile_fields[i].readOnly = true;
   }
+  
   profil_img.style.cursor = "default";
   // change_img.hidden = true;
 }
@@ -161,6 +159,7 @@ bearbeiten_btn.addEventListener("click", () => {
     editing = false;
     bearbeiten_btn_label.textContent = "Bearbeiten";
     bearbeiten_btn_icon.textContent = "edit";
+    change_img_label.style.display = "none";
     for(let i = 0; i < profile_fields.length; i++) {
       profile_fields[i].style.border = "none";
       profile_fields[i].readOnly = true;
@@ -172,6 +171,7 @@ bearbeiten_btn.addEventListener("click", () => {
     editing = true;
     bearbeiten_btn_label.textContent = "Speichern";
     bearbeiten_btn_icon.textContent = "done";
+    change_img_label.style.display = "flex";
     for(let i = 0; i < profile_fields.length; i++) {
       profile_fields[i].style.border = "#1F3659 solid .1vw";
       profile_fields[i].readOnly = false;
@@ -183,4 +183,7 @@ bearbeiten_btn.addEventListener("click", () => {
   }
 })
 
-
+console.log(profileButtons)
+insertBlocks();
+loadProfile();
+// window.onresize = reloadmk2;

@@ -142,6 +142,13 @@ main {
     align-self: flex-end;
 }
 
+.toggle:hover{
+    cursor: pointer;
+}
+.toggle *:hover {
+    cursor: pointer;
+}
+
 
 .accessibility-container {
     display: flex;
