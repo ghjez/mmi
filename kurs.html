@@ -12,6 +12,7 @@
        
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/kurs.css">
+        <link rel="stylesheet" href="styles/pruefung.css">
 
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
@@ -21,6 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
          <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
     <body>
         <header role="toolbar">
@@ -33,7 +35,7 @@
         <hr>
         <header class="kurs-header">
             <button class="kurs-header-button" id="kurs-button-label">Kurs 1</button>
-            <button class="kurs-header-button" id="kurs-pruefungen" onclick=" window.location.href='./pruefungen.html'"><label>Prüfung</label></button>
+            <button class="kurs-header-button" id="kurs-pruefungen"><label>Prüfung</label></button>
         </header>
         <main id="kurs-page">
             <h1>Forum</h1>
@@ -62,8 +64,9 @@
                 <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Zusatzmaterial 1</label></a></li>
             </ul>
         </main>
+        <script type="text/javascript" src="scripts/pruefung.js"></script>
     </body>
+    
     <script type="text/javascript" src="scripts/logout.js"></script>
     <script type="text/javascript" src="scripts/menuLoader.js"></script>
-    <script type="text/javascript" src="scripts/modulLoader.js"></script>
 </html>
