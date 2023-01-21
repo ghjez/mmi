@@ -156,3 +156,59 @@ main {
     align-items: center;
     gap: 1vw;
 }
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 10vw;
+    z-index: 3;
+    position: absolute;
+    align-self: flex-end;
+    text-align: left;
+    color: #1F3659;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    gap: 2vw;
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 86.6vw;
+    }
+    .slider-button {
+        width: 5vw;
+        height: 5vw;
+    }
+    .slider-button label {
+        font-size: 3vw;
+    }
+    .barrier-tooltip {
+        font-size: 3vw;
+    }
+    .toggle {
+        width: 8.4em;
+        height: 4.5em;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    main {
+        align-items: center;
+    }
+    .slider-button {
+        width: 6vw;
+        height: 6vw;
+    }
+    .slider-button label {
+        font-size: 4vw;
+    }
+    .barrier-tooltip {
+        font-size: 4vw;
+    }
+    .toggle {
+        width: 11.2em;
+        height: 6em;
+    }
+}
