@@ -12,7 +12,6 @@
        
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/accessibility.css">
-        <link rel="stylesheet" href="styles/range-input.css">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -34,58 +33,15 @@
 
         <hr>
         <main>
-            <div id="slider-div" class="accessibility-container">
-                <button class="slider-button" id="minus_btn"><label for="slider-button" class="minus-title">-</label></button>
-                <div class="slider">
-                    <input role="slider" type="range" min="1" max="100" class="styled-slider slider-progress" id="font-range">
-                </div>
-                <button class="slider-button" id="plus_btn"><label for="slider-button" class="plus-title">+</label></button>
-                <label class="barrier-tooltip">Font size</label>
-            </div>
-
-            <!-- <div class="contrast-div"> -->
-            <div id="contrast-div" class="accessibility-container">
-                <input type="checkbox" id="contrast"/>
-                <label for="contrast" class="toggle" id="contrast-toggle">
-                    <div class="toggle-slider"></div>
-                </label>
-                <label for="contrast-div" class="barrier-tooltip">Höhere Kontrast</label>
-            </div>
-
-            <div id="simple-text-div" class="accessibility-container">
-                <input type="checkbox" id="simple-text"/>
-                <label for="simple-text" class="toggle" id="simple-text-toggle">
-                    <div class="toggle-slider"></div>
-                </label>
-                <label for="simple-text-div" class="barrier-tooltip">Einfache Sprache</label>
-            </div>
-
-            <div id="tag-me-disabled-div" class="accessibility-container">
-                <input type="checkbox" id="tag-me-disabled"/>
-                <label for="tag-me-disabled" class="toggle" id="tag-me-disabled-toggle">
-                    <div class="toggle-slider"></div>
-                </label>
-                <label for="tag-me-disabled-div" class="barrier-tooltip">Tag mich als Bescränkte Person</label>
-            </div>
-
-            <div id="save-settings" class="accessibility-container">
-                <button id="save" class="menu-btn"><label for="save" class="menu-btn-label">Speichern Einstellungen</label></button>
-                <button id="reset" class="menu-btn"><label for="reset" class="menu-btn-label">Default Einstellungen</label></button>
-            </div>
-            
-
-            <section>
-                <note id="font-size-demo">This text shows that font size is changeable and this parameter will be saved between sessions.</note>
-                <note id="easy-text-demo">This text shows that it can become simpler and this parameter will be saved between sessions.</note>
-                <img id="test_image" src="storage/shrek.jpg" alt="Test image to see contrast">
-            </section>
+            <sidebar>
+                
+            </sidebar>
         </main>
     
         <footer></footer>
         <!-- <script src="scripts/fontSlider.js"></script> -->
         <script src="scripts/range-input.js"></script>
         <script src="scripts/logout.js"></script>
-        <script src="scripts/saveAccessibilitySettings.js"></script>
         <script type="text/javascript" src="scripts/menuLoader.js"></script>
         
         <script type="text/javascript" src="scripts/check-login.js"></script>

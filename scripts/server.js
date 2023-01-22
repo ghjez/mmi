@@ -42,10 +42,11 @@ app.put('/accessibility', (req, res) => {
     var accessibility = JSON.parse(fs.readFileSync('storage/accessibility.json', 'utf8'));
     
     accessibility.font_size = newValues.font_size;
+    accessibility.mobile_font_size = newValues.mobile_font_size;
     accessibility.simple_text = newValues.simple_text;
     accessibility.contrast = newValues.contrast;
-    accessibility.original_text = newValues.original_text;
-    accessibility.simplified_text = newValues.simplified_text;
+    accessibility.original_text = accessibility.original_text;
+    accessibility.simplified_text = accessibility.simplified_text;
 
     accessibility = JSON.stringify(accessibility);
     fs.writeFileSync('storage/accessibility.json', accessibility); 

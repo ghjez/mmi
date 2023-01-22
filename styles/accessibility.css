@@ -172,6 +172,17 @@ section {
     gap: 2vw;
 }
 
+
+#save-settings button {
+    width: fit-content;
+}
+
+#save-settings button:active {
+    color: #1F3659;
+    background-color: white;
+}
+
+
 @media (max-width: 800px) {
     main {
         width: 86.6vw;
@@ -189,6 +200,26 @@ section {
     .toggle {
         width: 8.4em;
         height: 4.5em;
+    }
+    #save-settings {
+        gap: 2vw;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #save-settings button {
+        width: 40vw;
+        height: 10vw;
+        font-size: 3vw;
+        padding: 2vw;
+    }
+    section {
+        /* flex-direction: row; */
+        /* width: 86.6vw;
+        height: 10vw;
+        font-size: 1vw;
+        gap: 2vw;
+        margin-top: 50vh; */
+        display: none;
     }
 }
 
@@ -210,5 +241,11 @@ section {
     .toggle {
         width: 11.2em;
         height: 6em;
+    }
+    #save-settings button {
+        width: 60vw;
+        height: 20vw;
+        font-size: 4vw;
+        /* padding: 2vw; */
     }
 }

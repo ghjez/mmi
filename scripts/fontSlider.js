@@ -2,7 +2,6 @@ var font_range = document.getElementById('font-range');
 const minus_btn = document.getElementById('minus_btn');
 const plus_btn = document.getElementById('plus_btn');
 var font_size_demo = document.getElementById("font-size-demo");
-var font_range = document.getElementById("font-range");
 
 var slider_value = 50;
 font_range.value = slider_value;
