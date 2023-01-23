@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
         <link rel="stylesheet" href="styles/general.css">
-        <link rel="stylesheet" href="styles/accessibility.css">
+        <link rel="stylesheet" href="styles/map.css">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -33,17 +33,23 @@
 
         <hr>
         <main>
-            <sidebar>
-                
+            <sidebar id="side">
+                <button id="back" class="menu-btn"><span class="material-symbols-outlined">arrow_back</span><label for="back" class="menu-btn-label">Zurück</label></button>
+                <label for="from" class="map-input-label">Von:</label>
+                <input id="from" type="text" class="map-input">
+                <label for="to" class="map-input-label">Zu:</label>
+                <input id="to" type="text" class="map-input">
+                <button id="route" class="menu-btn"><label for="route" class="menu-btn-label">Route finden</label><span class="material-icons">search</span></button>
             </sidebar>
+            <div id="map-container">
+                <img id="map" src="storage/rub_map.svg" alt="Die Karte von Ruhr-Uni Bochum">
+            </div>
         </main>
     
         <footer></footer>
-        <!-- <script src="scripts/fontSlider.js"></script> -->
-        <script src="scripts/range-input.js"></script>
         <script src="scripts/logout.js"></script>
         <script type="text/javascript" src="scripts/menuLoader.js"></script>
-        
+        <script type="text/javascript" src="scripts/map.js"></script>
         <script type="text/javascript" src="scripts/check-login.js"></script>
     </body>
     

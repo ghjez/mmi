@@ -17,6 +17,7 @@ var slider_value = 50;
 // For save/reset buttons
 var save_btn = document.getElementById("save");
 var reset_btn = document.getElementById("reset");
+var route_btn = document.getElementById("map");
 
 var window_prev_width = window.innerWidth; 
 
@@ -191,4 +192,8 @@ reset_btn.addEventListener("click", () => {
     updateSimple();
 
     setSettings();
+})
+
+route_btn.addEventListener("click", () => {
+    window.location.href="./map.html";   
 })
