@@ -45,6 +45,7 @@ function loadMenu(){
 }
 
 function reloadMenu(){
+    console.log("reload");
     if((window.innerWidth <= 800) && (window_prev_width > 800)){
         header.innerHTML = '';
         header.innerHTML = mobileMenu;

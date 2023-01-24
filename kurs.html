@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible">
         <meta lang="de">
 
-        <title>Login page</title>
+        <title>Kurs</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
@@ -21,8 +21,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans+Condensed:ital@0;1&family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=IBM+Plex+Serif:ital@0;1&family=Inconsolata:wght@800;900&display=swap" rel="stylesheet">
          <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header role="toolbar">
@@ -33,40 +32,92 @@
             <button onclick="logout();" role="" id="logout-btn" class="menu-btn"><label for="logout" class="menu-btn-label">Log Out</label><span class="material-icons">exit_to_app</span></button> -->
         </header>
         <hr>
-        <header class="kurs-header">
+        <section class="kurs-header">
             <button class="kurs-header-button" id="kurs-button-label">Kurs 1</button>
-            <button class="kurs-header-button" id="kurs-pruefungen"><label>Prüfung</label></button>
-        </header>
+            <button class="kurs-header-button pruefung" id="kurs-pruefungen"><label>Prüfung</label></button>
+        </section>
         <main id="kurs-page">
-            <h1>Forum</h1>
-            <!-- ??? school menu_book -->
-            <ul class="kurs-forum-list">
-                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Ankündigungen</label></a></li>
-                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Allgemeine Diskussionen</label></a></li>
-                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Forum für Menschen mit speziellen Bedürfnissen</label></a></li>
-                <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Spezielles Forum 1</label></a></li>
-            </ul>
-            <h1>Organisation</h1>
-            <!-- ??? school menu_book -->
-            <ul class="kurs-forum-list">
-                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Organisation des Kurses</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Zoom-Link</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Klausurtermine</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Übungsgruppen</label></a></li>
-            </ul>
+            <section>
+                <h1>Forum</h1>
+                <!-- ??? school menu_book -->
+                <ul class="kurs-forum-list">
+                    <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Ankündigungen</label></a></li>
+                    <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Allgemeine Diskussionen</label></a></li>
+                    <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Forum für Menschen mit speziellen Bedürfnissen</label></a></li>
+                    <li><a href=""><span class="material-symbols-outlined">assignment</span><label class="kurs-label"> Spezielles Forum 1</label></a></li>
+                </ul>
+            </section>
+            <section>
+                <h1>Organisation</h1>
+                <!-- ??? school menu_book -->
+                <ul class="kurs-forum-list">
+                    <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Organisation des Kurses</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Zoom-Link</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Klausurtermine</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>school</span> <label class="kurs-label"> Übungsgruppen</label></a></li>
+                </ul>
+            </section>
 
-            <h1>Kurs</h1>
-            <!-- ??? school menu_book -->
-            <ul class="kurs-forum-list">
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Video)</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Script)</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Übung 1</label></a></li>
-                <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Zusatzmaterial 1</label></a></li>
-            </ul>
+            <section>
+                <h1>Kurs</h1>
+                <!-- ??? school menu_book -->
+                <ul class="kurs-forum-list">
+                    <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Video)</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Vorlesung 1(Script)</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Übung 1</label></a></li>
+                    <li><a href=""><span class='material-symbols-outlined'>menu_book</span> <label class="kurs-label"> Zusatzmaterial 1</label></a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h1>[Nur für Beschäftigte sichtbar]</h1>
+                <!-- ??? school menu_book -->
+                <ul class="kurs-forum-list">
+                    <li><a href="#" onclick="openGuide()"><span class='material-symbols-outlined'>assignment</span> <label class="kurs-label"> Guidelines</label></a></li>
+                    <article id="guide">
+                        <h2>For people with visual problems: </h2>
+                        <p>always publish lecture notes. Blind people have text-to-audio devices that can read .pdf. 
+                        published notes must be machine-readable. Copies of hand-written notes will not help. 
+                        for each graph and image, make alternative text prompts.
+                        make proper page titles for the subpages</p>
+
+                        <h2>For people with audial problems:</h2>
+                        <p>accompany the lecture with visual information.
+                        all the audio data must be available as subtitles.
+                        make sure there is more than one feedback channel (you cannot interact with a deaf person via voice channels etc.).</p>
+
+                        <h2>For people with learning difficulties:</h2>
+                        <p>make sure the information is well-structured and given in simple language. 
+                        remind about important events with e-mails 
+                        make the course material be re-accessible at any time.</p>
+                    </article>
+                    <li><a href="#" onclick="openList()"><span class='material-symbols-outlined'>assignment</span> <label class="kurs-label"> Teilnehmer</label></a></li>
+                    <ul id="students" class="kurs-forum-list">
+                        
+                    </ul>
+                </ul>
+            </section>
         </main>
+
+        <hr id="footer_margin">
+
+        <footer>
+            <ul id="adresse">
+                <label for="adresse">RUHR-UNIVERSITÄT BOCHUM</label>
+                <li><p>Universitätsstraße 150</p></li>
+                <li><p>44801</p> <p>Bochum</p></li>
+            </ul>
+            <ul id="contacts">
+                <label for="contacts">Kontaktdaten</label>
+                <li><p>Kontakt 1</p> <p>Telefon 1</p></li>
+                <li><p>Kontakt 2</p> <p>sample.email@rub.de</p></li>
+            </ul>
+            <img id="rub-logo" src="storage/rub_logo.svg" alt="Logo von Ruhr-Uni Bochum">
+        </footer>
         <script type="text/javascript" src="scripts/pruefung.js"></script>
     </body>
-    
+    <script type="text/javascript" src="scripts/check-login.js"></script>
     <script type="text/javascript" src="scripts/logout.js"></script>
     <script type="text/javascript" src="scripts/menuLoader.js"></script>
+    <script type="text/javascript" src="scripts/kursleiter.js"></script>
 </html>

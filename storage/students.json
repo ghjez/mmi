@@ -1,0 +1,12 @@
+{
+    "studentlist": [
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":false},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":false},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":false},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":true},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":false},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":true},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":true},
+        {"vorname":"Max","name":"Mustermann","nickname":"mustermensch","tag":false}
+    ]
+}

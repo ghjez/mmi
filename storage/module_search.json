@@ -1,0 +1,38 @@
+{ 
+  "name": "module_search",
+  "modulenlist": [
+      {
+        "name": "Informatik I",
+        "numcode": "000111",
+        "src": "storage/thumbnails/thumb1.png",
+        "type": "Vorlesung mit Übung",
+        "points": "8 bzw. 9",
+        "dozent": "Prof. Dr. Tobias Glasmachers",
+        "vorlesung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "uebung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "klausur":  ["12.02.2023", "14.03.2023", "06.10.2023"]
+      },
+      {
+        "name": "Informatik II",
+        "numcode": "000222",
+        "src": "storage/thumbnails/thumb2.png",
+        "type": "Vorlesung mit Übung",
+        "points": "8",
+        "dozent": "Dr. Gobias Tlasmachers",
+        "vorlesung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "uebung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "klausur":  []
+      },
+      {
+        "name": "Theoretische Informatik",
+        "numcode": "150302",
+        "src": "storage/thumbnails/thumb3.png",
+        "type": "Vorlesung mit Übung",
+        "points": "7",
+        "dozent": "Prof. Musterman Mustermanis",
+        "vorlesung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "uebung":  ["12.02.2023", "14.03.2023", "06.10.2023"],
+        "klausur":  ["12.02.2023", "14.03.2023", "06.10.2023"]
+      }
+]
+}

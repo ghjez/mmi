@@ -68,27 +68,44 @@
                 <label for="tag-me-disabled-div" class="barrier-tooltip">Tag mich als beschränkte Person</label>
             </div>
 
-            <div id="save-settings" class="accessibility-container">
-                <button id="save" class="menu-btn"><label for="save" class="menu-btn-label">Speichern Einstellungen</label></button>
-                <button id="reset" class="menu-btn"><label for="reset" class="menu-btn-label">Default Einstellungen</label></button>
-                <button id="map" class="menu-btn"><label for="map" class="menu-btn-label">Routenplanung</label></button>
+            <div class="accessibility-container save-settings">
+                <button id="save" class="menu-btn"><label for="save" class="menu-btn-label">Einstellungen speichern </label></button>
+                <button id="reset" class="menu-btn"><label for="reset" class="menu-btn-label">Standardeinstellungen</label></button>
+            </div>       
+            <div class="accessibility-container save-settings"><button id="map" class="menu-btn"><label for="map" class="menu-btn-label">Routenplanung</label><span class="material-symbols-outlined">
+                directions
+                </span></button>     
             </div>
             
-
             <section>
                 <note id="font-size-demo">This text shows that font size is changeable and this parameter will be saved between sessions.</note>
                 <note id="easy-text-demo">This text shows that it can become simpler and this parameter will be saved between sessions.</note>
-                <img id="test_image" src="storage/shrek.jpg" alt="Test image to see contrast">
+                <img id="test_image" src="storage/wink.jpeg" alt="Test image to see contrast">
             </section>
         </main>
+
+        <hr id="footer_margin">
     
-        <footer></footer>
+        <footer>
+            <ul id="adresse">
+                <label for="adresse">RUHR-UNIVERSITÄT BOCHUM</label>
+                <li><p>Universitätsstraße 150</p></li>
+                <li><p>44801</p> <p>Bochum</p></li>
+            </ul>
+            <ul id="contacts">
+                <label for="contacts">Kontaktdaten</label>
+                <li><p>Kontakt 1</p> <p>Telefon 1</p></li>
+                <li><p>Kontakt 2</p> <p>sample.email@rub.de</p></li>
+            </ul>
+            <img id="rub-logo" src="storage/rub_logo.svg" alt="Logo von Ruhr-Uni Bochum">
+        </footer>
         <!-- <script src="scripts/fontSlider.js"></script> -->
+        <!-- <script type="text/javascript" src="scripts/check-login.js"></script> -->
         <script src="scripts/range-input.js"></script>
         <script src="scripts/logout.js"></script>
         <script src="scripts/saveAccessibilitySettings.js"></script>
         <script type="text/javascript" src="scripts/menuLoader.js"></script>
-        
+        <script type="text/javascript">var barriere = true;</script>
         <script type="text/javascript" src="scripts/check-login.js"></script>
     </body>
     

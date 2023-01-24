@@ -68,13 +68,35 @@
 @media (max-width: 800px) {
     #search {
         width: 86.6vw;
+        padding-left: 0;
+        padding-right: 0;
     }
     .searchbox {
         font-size: 2.5vw;
         height: fit-content;
     }
+    #search button {
+        width: 4vw;
+        height: 100%;
+        padding: 3vw;
+    }
     #search button > span {
-        font-size: 3vw !important;
+        font-size: 4vw !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #search {
+        width: 86.6vw;
+        height: 10vw;
+        gap: 1vw;
+    }
+    .searchbox {
+        font-size: 3vw;
+        height: fit-content;
+    }
+    #search button > span {
+        font-size: 5vw !important;
     }
 }
 

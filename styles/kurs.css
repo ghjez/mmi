@@ -3,27 +3,66 @@
     display:flex;
     margin: auto;
     width:62vw;
-    height: 80vh;
+    height: 70vh;
     flex-direction: column;
     align-items: left;
     scroll-behavior: smooth;
     overflow-y: scroll;
     overflow-x: hidden;
+    gap: 5vw;
 }
 
 h1{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 2vw;
     font-weight: 500;
-    line-height: 45px;
+    /* line-height: 45px; */
     letter-spacing: 0em;
     text-align: left;
     color: #1F3659;
+    
+    margin-bottom: 1vw;
+}
+
+h2{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 500;
+    /* line-height: 45px; */
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F3659;
+    
+    margin: 0;
+}
+
+#guide {
+    display: none;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 2vw;
+}
+#guide p {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 500;
+    /* line-height: 45px; */
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F3659;
+    
+    margin-bottom: 1vw;
 }
 
 .kurs-forum-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
     list-style:none;
-    margin-bottom: 10vh;
+    margin: 0;
+    /* margin-bottom: 5vh; */
 }
 
 .kurs-forum-list a{
@@ -34,7 +73,7 @@ h1{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.2vw;
     font-weight: 500;
-    line-height: 45px;
+    /* line-height: 45px; */
     letter-spacing: 0em;
     text-align: left;
     color: #1F3659;
@@ -55,14 +94,18 @@ h1{
     background-color: #1F3659;
     color: white;
 } */
-.kurs-forum-list *:hover{
+.kurs-forum-list li *:hover{
     cursor: pointer;
     background-color: #1F3659;
     color: white;
 }
-.kurs-forum-list *:hover a{
+.kurs-forum-list li *:hover a{
     cursor: pointer;
     color: white;
+}
+.student {
+    justify-content: left;
+    height: fit-content;
 }
 
 
@@ -127,4 +170,58 @@ h1{
 
 .kurs-label{
     font-size: 1vw !important;
+}
+
+@media (max-width: 1024px) {
+    .kurs-label{
+        font-size: 1.5vw !important;
+    }
+    .kurs-forum-list > li > a > span{
+        font-size: 1.5vw;
+    }
+    .kurs-header-button {
+        width: 15vw;
+        height: 3vw;
+        /* font-size: 3vw; */
+    }
+}
+
+@media (max-width: 800px) {
+    .kurs-header {
+        width: 86.8vw;
+        height: 10vw;
+    }
+    #kurs-page {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .kurs-label{
+        font-size: 3vw !important;
+    }
+    .kurs-forum-list{
+        gap: 3vw;
+    }
+    .kurs-forum-list > li{
+        height: 5vw;
+    }
+    .kurs-forum-list > li > a{
+        height: 5vw;
+    }
+    .kurs-forum-list > li > a > span{
+        font-size: 3vw;
+    }
+    .kurs-header-button {
+        width: 24vw;
+        height: 6vw;
+        font-size: 3vw;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .kurs-header {
+        width: 86.8vw;
+        height: 13vw;
+    }
 }

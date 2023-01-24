@@ -6,7 +6,7 @@
     align-items: center;
     align-content: center;
     width: 62vw;
-    height: 70vh;
+    height: 65vh;
     margin: auto;
     padding: 0;
     background-color: transparent;
@@ -49,9 +49,9 @@ h1{
 
 .pruefung{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
     width: 100%;
     height: 10vh;
     margin: 0;
@@ -63,10 +63,12 @@ h1{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1vw;
     font-weight: 500;
-    line-height: 40px;
+    /* line-height: 40px; */
     letter-spacing: 0em;
     text-align: left;
     padding-left: 1vw;
+
+    gap: .1vw;
 }
 
 .pruefung:hover{

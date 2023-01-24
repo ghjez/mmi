@@ -1,0 +1,30 @@
+#back_container {
+    display: flex;
+    width: 62vw;
+    margin: auto;
+    margin-top: 1vw;
+}
+#back {
+    width: fit-content;
+}
+@media (max-width: 800px) {
+    #back_container {
+        width: 86.8vw;
+        height: fit-content;
+        overflow: hidden;
+        margin-top: 1vw;
+    }  
+    #back {
+        margin-top: 0;
+        height:10vw;
+        font-size: 3vw;
+    }
+    #back .material-symbols-outlined {
+        font-size: 3vw !important;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+   
+}

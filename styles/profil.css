@@ -1,7 +1,7 @@
 #feed {
     box-sizing: border-box;
     width: 62vw;
-    /* height:80vh; */
+    min-height: 40vh;
     margin: auto;
     margin-top: 2vw;
 }
@@ -115,6 +115,7 @@
 #profile-settings input:focus {
     outline: none;
 }
+
 
 #userpic {
     width: fit-content;

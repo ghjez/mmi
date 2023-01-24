@@ -4,6 +4,8 @@ main {
     flex-direction: column;
     width: 62vw;
     height: fit-content;
+    min-height:70vh;
+    /* height: 63vw; */
     margin: auto;
     gap: 3vh;
 }
@@ -172,16 +174,28 @@ section {
     gap: 2vw;
 }
 
+#test_image {
+    width: 100%;
+}
 
-#save-settings button {
+.save-settings button {
     width: fit-content;
 }
 
-#save-settings button:active {
+.save-settings button:active {
     color: #1F3659;
     background-color: white;
 }
 
+#map {
+    width: 15vw;
+    height: 5vw;
+    justify-content: space-between;
+    margin-top: 3vw;
+}
+#map .material-symbols-outlined {
+    font-size: 3vw !important;
+}
 
 @media (max-width: 800px) {
     main {
@@ -201,16 +215,25 @@ section {
         width: 8.4em;
         height: 4.5em;
     }
-    #save-settings {
+    .save-settings {
         gap: 2vw;
         flex-direction: column;
         align-items: flex-start;
     }
-    #save-settings button {
+    .save-settings button {
         width: 40vw;
         height: 10vw;
         font-size: 3vw;
         padding: 2vw;
+    }
+    #map {
+        width: 40vw;
+        height: 10vw;
+        font-size: 3vw;
+        padding: 2vw;
+    }
+    #map .material-symbols-outlined {
+        font-size: 5vw !important;
     }
     section {
         /* flex-direction: row; */
@@ -242,10 +265,21 @@ section {
         width: 11.2em;
         height: 6em;
     }
-    #save-settings button {
+    .save-settings button {
         width: 60vw;
         height: 20vw;
         font-size: 4vw;
         /* padding: 2vw; */
+    }
+
+    #map {
+        width: 60vw;
+        height: 20vw;
+        font-size: 4vw;
+        padding: 2vw;
+    }
+    #map .material-symbols-outlined {
+        font-size: 7vw !important;
+        padding-right: 4vw;
     }
 }

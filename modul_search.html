@@ -12,8 +12,9 @@
        
         <link rel="stylesheet" href="styles/general.css">
         <link rel="stylesheet" href="styles/searchbar.css">
-        <link rel="stylesheet" href="styles/pruefungen.css">
+        <link rel="stylesheet" href="styles/module.css">
         <link rel="stylesheet" href="styles/pruefung.css">
+        <link rel="stylesheet" href="styles/modul_search.css">
 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Import Material Design Icons -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -36,30 +37,28 @@
 
         <div id="search">
             <button class="voice-input"><span class="material-symbols-outlined">mic</span></button>
-            <input class="searchbox" role="searchbox" type="text" placeholder="Prüfungen suchen..">
+            <input class="searchbox" role="searchbox" type="text" placeholder="Module suchen..">
             <button type="submit" class="execute-search"><span class="material-icons">search</span></button>
         </div>
-        <main id="columns" role="main">
-            <section class="pruefungen-column">
-                <h1>Meine Prüfungen</h1>
-                <nav id="registered" class="pruefungen-nav">
-                    <!-- <button class="pruefung" onclick= "pruefungPopup()">Informatik I</button> -->
-                </nav>
-            </section>
-            <section class="pruefungen-column">
-                <h1>Verfügbare Prüfungen</h1>
-                <nav id="available" class="pruefungen-nav">
-                    <!-- <button class="pruefung" onclick="pruefungPopup()">Informatik II</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik III</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik IV</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik V</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik VI</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik VII</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik VIII</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik IX</button>
-                    <button class="pruefung" onclick="pruefungPopup()">Informatik X</button> -->
-                </nav>
-            </section>
+        
+        <h1>Gefundene Module:</h1>
+        
+        <main id="feed" role="feed">
+            <div id="back_container">
+                <button id="back" class="menu-btn"><span class="material-symbols-outlined">arrow_back</span><label for="back" class="menu-btn-label">Zurück</label></button>
+            </div>
+            
+            <div class="row">
+                <div class="column">
+                    
+                </div>
+                <div class="column">
+                    
+                </div>
+                <div class="column">
+                    
+                </div>
+            </div>
         </main>
 
         <hr id="footer_margin">
@@ -81,5 +80,7 @@
     <script type="text/javascript" src="scripts/check-login.js"></script>
     <script type="text/javascript" src="scripts/logout.js"></script>
     <script type="text/javascript" src="scripts/menuLoader.js"></script>
-    <script type="text/javascript" src="scripts/pruefung.js"></script>
+    <script type="text/javascript" src="scripts/modulSearchLoader.js"></script>
+    <!-- <script type="text/javascript" src="scripts/pruefung.js"></script> -->
+    <script type="text/javascript" src="scripts/search.js"></script>
 </html>
