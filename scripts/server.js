@@ -80,6 +80,7 @@ app.put('/register', (req, res) => {
     for(let i = 0; i < angemeldete.pruefungen.length; i++) {
         if((newValues.name == angemeldete.pruefungen[i].name) && (newValues.date == angemeldete.pruefungen[i].date)) new_registration = false;
     }
+    if(typeof newValues.name == "undefined" || newValues.name == null) newValues.name = "Prüfung";
     if(new_registration) angemeldete.pruefungen.push(newValues);
     angemeldete = JSON.stringify(angemeldete);
     fs.writeFileSync('storage/angemeldete.json', angemeldete); 

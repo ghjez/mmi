@@ -123,6 +123,7 @@ function pruefungPopup(dad_exam){
     // einschreibeBtn.addEventListener("click", einschreiben);
     einschreibeBtn.addEventListener("click",() => {
         let the_name = dad_exam.textContent;
+        if(the_name == "undefined") the_name = "Prüfung 1";
         let datum = document.getElementById("pruefungen").value;
         console.log(the_name, datum);
         einschreiben(the_name, datum);
