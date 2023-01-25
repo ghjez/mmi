@@ -217,6 +217,8 @@ function modulPopup(dad_module){
     console.log(datum);
     einschreiben(our_module.name, datum);
   });
+  document.getElementById("popup-div").focus();
+  remute();
 }
 
 loadModules();

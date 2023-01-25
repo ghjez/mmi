@@ -61,6 +61,7 @@ function reloadMenu(){
 function resized() {
     reloadMenu();
     if(typeof reloadmk2 === "function") reloadmk2();
+    if(typeof remute === "function") remute();
     // if(typeof mobileFontSize === "function") mobileFontSize();
 }
 

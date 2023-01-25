@@ -180,7 +180,7 @@ bearbeiten_btn.addEventListener("click", () => {
     profil_img.style.cursor = "pointer";
     vorname.focus();
     // change_img.hidden = false;
-    
+    remute();
   }
 })
 

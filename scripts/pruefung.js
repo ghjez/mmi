@@ -128,6 +128,8 @@ function pruefungPopup(dad_exam){
         console.log(the_name, datum);
         einschreiben(the_name, datum);
       });
+    document.getElementById("popup-div").focus();
+    remute();
 }
 
 function renewRegistration(exams) {
