@@ -58,6 +58,7 @@ app.put('/accessibility', (req, res) => {
     accessibility.mobile_font_size = newValues.mobile_font_size;
     accessibility.simple_text = newValues.simple_text;
     accessibility.contrast = newValues.contrast;
+    accessibility.tagme = newValues.tagme;
     accessibility.original_text = accessibility.original_text;
     accessibility.simplified_text = accessibility.simplified_text;
 

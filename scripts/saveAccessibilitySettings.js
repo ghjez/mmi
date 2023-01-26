@@ -19,6 +19,8 @@ var save_btn = document.getElementById("save");
 var reset_btn = document.getElementById("reset");
 var route_btn = document.getElementById("map");
 
+var tagme_toggle = document.getElementById("tag-me-disabled");
+
 var window_prev_width = window.innerWidth; 
 
 // All settings 
@@ -28,6 +30,7 @@ var simple_text;
 var test_contrast;
 var original_text;
 var simplified_text;
+var tag_me;
 
 var is_mobile;
 
@@ -53,6 +56,7 @@ function setSettings() {
             mobile_font_size: this.mobile_font_size,
             simple_text: this.simple_text,
             contrast: this.test_contrast,
+            tagme: this.tag_me,
             original_text: this.original_text,
             simplified_text: this.simplified_text
     }),
@@ -68,6 +72,7 @@ function initSettings(accessibility) {
     mobile_font_size = accessibility.mobile_font_size;
     simple_text = accessibility.simple_text;
     test_contrast = accessibility.contrast;
+    tag_me = accessibility.tagme;
     original_text = accessibility.original_text;
     simplified_text = accessibility.simplified_text;
     slider_value = parseFloat(font_size)/0.02;
@@ -75,8 +80,14 @@ function initSettings(accessibility) {
     updateFontSize();
     updateContrastToggle();
     updateSimpleToggle();
+    updateTagmeToggle();
     updateContrast();
     updateSimple();
+}
+
+function updateTagmeToggle() {
+    if(tag_me) tagme_toggle.checked = true;
+    else tagme_toggle.checked = false;
 }
 
 function updateContrastToggle() {
@@ -169,6 +180,15 @@ simple_toggle.addEventListener("change", () => {
     else {
         simple_text = false;
         updateSimple();
+    }
+})
+
+tagme_toggle.addEventListener("change", () => {
+    if(tagme_toggle.checked) {
+        tag_me = true;
+    }
+    else {
+        tag_me = false;
     }
 })
 
